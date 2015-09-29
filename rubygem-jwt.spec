@@ -4,7 +4,7 @@
 #
 Name     : rubygem-jwt
 Version  : 1.5.1
-Release  : 6
+Release  : 7
 URL      : https://rubygems.org/downloads/jwt-1.5.1.gem
 Source0  : https://rubygems.org/downloads/jwt-1.5.1.gem
 Summary  : No detailed summary available
