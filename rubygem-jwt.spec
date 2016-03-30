@@ -4,25 +4,15 @@
 #
 Name     : rubygem-jwt
 Version  : 1.5.1
-Release  : 7
+Release  : 8
 URL      : https://rubygems.org/downloads/jwt-1.5.1.gem
 Source0  : https://rubygems.org/downloads/jwt-1.5.1.gem
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : MIT
 BuildRequires : ruby
-BuildRequires : rubygem-diff-lcs
-BuildRequires : rubygem-docile
 BuildRequires : rubygem-echoe
 BuildRequires : rubygem-rdoc
-BuildRequires : rubygem-rspec
-BuildRequires : rubygem-rspec-core
-BuildRequires : rubygem-rspec-expectations
-BuildRequires : rubygem-rspec-mocks
-BuildRequires : rubygem-rspec-support
-BuildRequires : rubygem-simplecov
-BuildRequires : rubygem-simplecov-html
-BuildRequires : rubygem-simplecov-json
 
 %description
 No detailed description available
@@ -54,59 +44,15 @@ cp -pa .%{_bindir}/* \
 %{buildroot}%{_bindir}/
 fi
 
-%check
-export http_proxy=http://127.0.0.1:9/
-export https_proxy=http://127.0.0.1:9/
-export no_proxy=localhost
-pushd %{buildroot}%{gem_dir}/gems/jwt-1.5.1
-rspec -I.:lib spec/
-popd
-
 
 %files
 %defattr(-,root,root,-)
-/usr/lib64/ruby/gems/2.2.0/cache/jwt-1.5.1.gem
-/usr/lib64/ruby/gems/2.2.0/doc/jwt-1.5.1/ri/JWT/DecodeError/cdesc-DecodeError.ri
-/usr/lib64/ruby/gems/2.2.0/doc/jwt-1.5.1/ri/JWT/ExpiredSignature/cdesc-ExpiredSignature.ri
-/usr/lib64/ruby/gems/2.2.0/doc/jwt-1.5.1/ri/JWT/ImmatureSignature/cdesc-ImmatureSignature.ri
-/usr/lib64/ruby/gems/2.2.0/doc/jwt-1.5.1/ri/JWT/IncorrectAlgorithm/cdesc-IncorrectAlgorithm.ri
-/usr/lib64/ruby/gems/2.2.0/doc/jwt-1.5.1/ri/JWT/InvalidAudError/cdesc-InvalidAudError.ri
-/usr/lib64/ruby/gems/2.2.0/doc/jwt-1.5.1/ri/JWT/InvalidIatError/cdesc-InvalidIatError.ri
-/usr/lib64/ruby/gems/2.2.0/doc/jwt-1.5.1/ri/JWT/InvalidIssuerError/cdesc-InvalidIssuerError.ri
-/usr/lib64/ruby/gems/2.2.0/doc/jwt-1.5.1/ri/JWT/InvalidJtiError/cdesc-InvalidJtiError.ri
-/usr/lib64/ruby/gems/2.2.0/doc/jwt-1.5.1/ri/JWT/InvalidSubError/cdesc-InvalidSubError.ri
-/usr/lib64/ruby/gems/2.2.0/doc/jwt-1.5.1/ri/JWT/Json/cdesc-Json.ri
-/usr/lib64/ruby/gems/2.2.0/doc/jwt-1.5.1/ri/JWT/Json/decode_json-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/jwt-1.5.1/ri/JWT/Json/encode_json-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/jwt-1.5.1/ri/JWT/VerificationError/cdesc-VerificationError.ri
-/usr/lib64/ruby/gems/2.2.0/doc/jwt-1.5.1/ri/JWT/asn1_to_raw-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/jwt-1.5.1/ri/JWT/base64url_decode-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/jwt-1.5.1/ri/JWT/base64url_encode-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/jwt-1.5.1/ri/JWT/cdesc-JWT.ri
-/usr/lib64/ruby/gems/2.2.0/doc/jwt-1.5.1/ri/JWT/decode-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/jwt-1.5.1/ri/JWT/decode_header_and_payload-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/jwt-1.5.1/ri/JWT/decoded_segments-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/jwt-1.5.1/ri/JWT/encode-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/jwt-1.5.1/ri/JWT/encoded_header-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/jwt-1.5.1/ri/JWT/encoded_payload-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/jwt-1.5.1/ri/JWT/encoded_signature-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/jwt-1.5.1/ri/JWT/raw_segments-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/jwt-1.5.1/ri/JWT/raw_to_asn1-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/jwt-1.5.1/ri/JWT/secure_compare-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/jwt-1.5.1/ri/JWT/sign-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/jwt-1.5.1/ri/JWT/sign_ecdsa-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/jwt-1.5.1/ri/JWT/sign_hmac-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/jwt-1.5.1/ri/JWT/sign_rsa-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/jwt-1.5.1/ri/JWT/signature_algorithm_and_key-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/jwt-1.5.1/ri/JWT/verify_ecdsa-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/jwt-1.5.1/ri/JWT/verify_rsa-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/jwt-1.5.1/ri/JWT/verify_signature-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/jwt-1.5.1/ri/cache.ri
-/usr/lib64/ruby/gems/2.2.0/gems/jwt-1.5.1/Manifest
-/usr/lib64/ruby/gems/2.2.0/gems/jwt-1.5.1/Rakefile
-/usr/lib64/ruby/gems/2.2.0/gems/jwt-1.5.1/jwt.gemspec
-/usr/lib64/ruby/gems/2.2.0/gems/jwt-1.5.1/lib/jwt.rb
-/usr/lib64/ruby/gems/2.2.0/gems/jwt-1.5.1/lib/jwt/json.rb
-/usr/lib64/ruby/gems/2.2.0/gems/jwt-1.5.1/spec/helper.rb
-/usr/lib64/ruby/gems/2.2.0/gems/jwt-1.5.1/spec/jwt_spec.rb
-/usr/lib64/ruby/gems/2.2.0/specifications/jwt-1.5.1.gemspec
+/usr/lib64/ruby/gems/2.3.0/cache/jwt-1.5.1.gem
+/usr/lib64/ruby/gems/2.3.0/gems/jwt-1.5.1/Manifest
+/usr/lib64/ruby/gems/2.3.0/gems/jwt-1.5.1/Rakefile
+/usr/lib64/ruby/gems/2.3.0/gems/jwt-1.5.1/jwt.gemspec
+/usr/lib64/ruby/gems/2.3.0/gems/jwt-1.5.1/lib/jwt.rb
+/usr/lib64/ruby/gems/2.3.0/gems/jwt-1.5.1/lib/jwt/json.rb
+/usr/lib64/ruby/gems/2.3.0/gems/jwt-1.5.1/spec/helper.rb
+/usr/lib64/ruby/gems/2.3.0/gems/jwt-1.5.1/spec/jwt_spec.rb
+/usr/lib64/ruby/gems/2.3.0/specifications/jwt-1.5.1.gemspec
