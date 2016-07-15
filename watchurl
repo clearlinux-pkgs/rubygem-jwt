@@ -1,3 +1,4 @@
-# rubygem-oauth2 requires version (~>1.0)
-# check: https://rubygems.org/gems/oauth2/versions/1.0.0
-watchurl=https://rubygems.org/gems/jwt/versions/(1.[\d.]*)
+# File auto-generated with 'Watchfile generator'
+# 2016-07-14 22:13:53.916764
+# {'~>1.0'}
+watchurl=https://rubygems.org/gems/jwt/versions/([0-1]\.[0-9]{1,2}(?:\.[0-9a-zA-Z]+)*)
